@@ -12,7 +12,7 @@
 
   <!-- Bootstrap core CSS -->
 
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.css') }}">
 
   <!-- Custom fonts for this template -->
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/bootstrap/css/all.css') }}">
@@ -23,7 +23,7 @@
 
   <!-- Custom styles for this template -->
 
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/bootstrap/css/agency.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/agency.css') }}">
 
 </head>
 
@@ -65,7 +65,7 @@
       <div class="intro-text">
         <div class="intro-lead-in">Welcome To Our Studio!</div>
         <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-        <iframe src = "https://apps.runescape.com/runemetrics/app/overview/player/kamic0" width="500px" height="500px" > </iframe>
+	<!-- <iframe src = "https://apps.runescape.com/runemetrics/app/overview/player/kamic0" width="500px" height="500px" > </iframe> -->
 	<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
     </div>
@@ -699,19 +699,18 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}"> 
+  <script src="{{ url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ url_for('static',filename='vendor/jquery/jquery.min.js') }}"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{ url_for('static',filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
   <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+  <script src="{{ url_for('static',filename='js/jqBootstrapValidation.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/contact_me.js') }}"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
+  <script src="{{ url_for('static',filename='js/agency.min.js') }}"></script>
 
 </body>
 
