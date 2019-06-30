@@ -1,13 +1,21 @@
+#!/usr/bin/python
 from flask import Flask 
 from flask import render_template
 
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    name = "Caleb's"
+def landingPage():
+        
+    return render_template('new_index.html')
 
-    return render_template('new_index.html', name=name)
+@app.route("/coaching")
+def coaching():
+    
+    name = "Caleb's"
+    return render_template('index.html', name=name)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
+
+
