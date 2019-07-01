@@ -12,8 +12,8 @@ def landingPage():
 @app.route("/coaching")
 def coaching():
     
-    name = "Caleb's"
-    return render_template('index.html', name=name)
+    user = "Kamic0"
+    return render_template('index.html', user=user)
 
 if __name__ == "__main__":
     app.run(debug=True)

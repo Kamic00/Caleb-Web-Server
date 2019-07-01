@@ -65,7 +65,19 @@
       <div class="intro-text">
         <div class="intro-lead-in">Welcome To Kamic0</div>
         <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-	<!-- <iframe src = "https://apps.runescape.com/runemetrics/app/overview/player/kamic0" width="500px" height="500px" > </iframe> -->
+	    <!-- <div class="my-slides" style="max-width:500px">
+	        <img class="mySlides" src={{ url_for('static',filename='img/runescapeSlideCws.jpg') }} style="width:100%">	
+		<img class="mySlides" src={{ url_for('static',filename='img/mtgSlideCws.jpg') }} style="width:100%"> -->	
+               <div id="slideshow">
+               <div>
+		       <img class="myslides" src="{{ url_for('static',filename='img/mySlides/runescapeSlideCws.jpg') }}">
+               </div>
+               <div>
+		       <img class="myslides" src="{{ url_for('static',filename='img/mySlides/mtgSlideCws.jpg') }}">
+               </div>
+               </div> 
+	    </div>
+		<!-- <iframe src = "https://apps.runescape.com/runemetrics/app/overview/player/kamic0" width="500px" height="500px" > </iframe> -->
 	<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
       </div>
     </div>
@@ -85,7 +97,8 @@
 		<a href="{{ url_for('coaching') }}">
 	    <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+	      <!-- <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i> -->
+	      <i class='fab fa-critical-role fa-stack-1x' style='font-size:80;color:black'></i>
 	    </span> 
 	    <h4 class="service-heading">Coaching</h4>
 	  </a>
@@ -94,15 +107,17 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
+	    <!-- < class="fas fa-laptop fa-stack-1x fa-inverse"></i> -->
+	    <i class="fas fa-bong fa-stack-1x"></i>
+	  </span>
           <h4 class="service-heading">Leveling</h4>
           <p class="text-muted">Leveling services available.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+	    <!-- <i class="fas fa-lock fa-stack-1x fa-inverse"></i> -->
+	    <i class="fas fa-dungeon fa-stack-1x"></i>
           </span>
           <h4 class="service-heading">Support</h4>
           <p class="text-muted">Aid with walkthrough, playstyle, etc.</p>
@@ -128,7 +143,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="{{ url_for('static',filename='img/01-thumbnail.jpg') }}" alt="">
+            <img class="img-fluid" src="{{ url_for('static',filename='img/runescapeiconcws.jpg') }}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Runescape</h4>
@@ -142,7 +157,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-	    <img class="img-fluid" src="{{ url_for('static',filename='img/02-thumbnail.jpg') }}" alt="">
+	    <img class="img-fluid" src="{{ url_for('static',filename='img/mtgiconcws.jpg') }}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Magic the Gathering</h4>
@@ -156,7 +171,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-	    <img class="img-fluid" src="{{ url_for('static',filename='img/03-thumbnail.jpg') }}" alt="">
+	    <img class="img-fluid" src="{{ url_for('static',filename='img/apexiconcws.jpg') }}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Apex Legends</h4>
@@ -170,7 +185,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-	    <img class="img-fluid" src="{{ url_for('static',filename='img/04-thumbnail.jpg') }}" alt="">
+	    <img class="img-fluid" src="{{ url_for('static',filename='img/pubgiconcws.jpg') }}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>PUBG</h4>
@@ -184,7 +199,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-	    <img class="img-fluid" src="{{ url_for('static',filename='img/05-thumbnail.jpg') }}" alt="">
+	    <img class="img-fluid" src="{{ url_for('static',filename='img/d3iconcws.jpg') }}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Diablo 3</h4>
@@ -198,7 +213,7 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-	    <img class="img-fluid" src="{{ url_for('static',filename='img/06-thumbnail.jpg') }}" alt="">
+	    <img class="img-fluid" src="{{ url_for('static',filename='img/fpsiconcws.jpg') }}" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>Misc. FPS</h4>
@@ -715,5 +730,21 @@
   <script src="{{ url_for('static',filename='js/agency.min.js') }}"></script>
 
 </body>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("myslides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 
 </html>
